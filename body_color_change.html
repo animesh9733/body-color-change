@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>body color change</title>
+    <style>
+      body{
+        display: flex;
+      }
+        
+        input{
+          
+            height: 30px;
+            width: 300px;
+            border:2px solid black;
+            border-radius: 5px;
+            outline: none;
+            
+        }
+        input:focus{
+            border: 2px solid black;
+            transition: 0.9s;
+            /* box-shadow: 10px 10px 5px lightblue; */
+        }
+        div{
+          position: absolute;
+        transform: translate(-50%, -50%);
+        top: 50%;
+        left: 50%;
+        width: 300px;
+        }
+    
+
+    </style>
+</head>
+<body>
+    <div>
+        <input type="text" placeholder="enter your fevorite color.." id="color">
+
+    </div>
+   
+    <script>
+    
+    let textInput = document.getElementById('color') 
+  textInput.addEventListener('input', () => { 
+
+  let val=textInput.value;
+document.body.style.backgroundColor=val;
+if(document.body.getAttribute("style")==null){
+  console.log("null");
+}
+else{
+  console.log("p");
+}
+
+
+
+})
+
+
+ </script>
+    
+</body>
+</html>
